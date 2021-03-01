@@ -1,0 +1,26 @@
+/*
+ * Produces a multiple of the base-unit value, in rems.
+ */
+@function bu($amount){
+  @if unitless($amount) {
+    @return ($base-unit*$amount/$base-font-size) * 1rem;
+  }
+  @else {
+    @error "Base unit parameters must be unitless";
+  }
+}
+
+/*
+ * Converts a unitless or px value to rems.
+ */
+@function rem($value){
+  @if unitless($value) {
+    @return $value/$base-font-size * 1rem;
+  }
+  @else if unit($value) == "px" {
+    @return $value / ($value * 0 + 1) / $base-font-size * 1rem;
+  }
+  @else {
+    @error "Unable to convert unit #{unit($value)} to rem";
+  }
+}

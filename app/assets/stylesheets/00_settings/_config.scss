@@ -1,0 +1,24 @@
+$base-font-size: 16;
+$base-font-size-px: $base-font-size * 1px;
+$base-unit: 8;
+
+$breakpoints: (
+  small: 0,
+  medium: 768,
+  large: 1016,
+  x-large: 1200
+);
+
+$border-radius: (
+  light: 3px,
+  medium: 4px,
+  heavy: 8px,
+  mega: 12px,
+  circle: 50%
+);
+
+$box-shadow: (
+  popover: (0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)),
+  card: 0 2px 4px 0 rgba(92,94,98,0.15),
+  priority: 0 4px 8px 0 rgba(92,94,98,0.24)
+);
