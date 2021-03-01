@@ -56,9 +56,17 @@ RSpec.configure do |config|
   #
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
+
+
   config.infer_spec_type_from_file_location!
   # add `FactoryBot` methods
   config.include FactoryBot::Syntax::Methods
+
+  config.include Devise::Test::IntegrationHelpers, type: :request
+  # config.include Devise::TestHelpers, type: :controller
+  # config.include Devise::Test::IntegrationHelpers, type: :feature
+  # config.include Devise::Test::ControllerHelpers, type: :controller
+  # config.include Devise::Test::ControllerHelpers, type: :view
 
   # start by truncating all the tables but then use the faster transaction strategy the rest of the time.
   config.before(:suite) do

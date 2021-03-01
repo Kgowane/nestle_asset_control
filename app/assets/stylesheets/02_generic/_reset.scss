@@ -1,0 +1,84 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  @include set-font-family();
+  font-size: $base-font-size-px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: map-get($foreground-color, default);
+}
+
+html, body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  background-color: map-get($background-color, default);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: map-get($foreground-color, default);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: map-get($foreground-color, default);
+  margin: 0;
+}
+
+main, section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+dl {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  dd {
+    margin: 0;
+  }
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+  @include transition(fill);
+}
+
+textarea {
+  font-family: inherit;
+}
+
+button:focus, input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+button, input[type=submit] {
+  font-family: inherit;
+}
+
+select {
+  font-family: inherit;
+}
